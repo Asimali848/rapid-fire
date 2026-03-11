@@ -57,7 +57,7 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl bg-accent flex items-center justify-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
                 <Code2 className="w-5 h-5 text-accent-foreground" />
               </div>
-              <span className="text-xl font-bold cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>DevForge</span>
+              <span className="text-xl font-bold cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>Rapid-Fire</span>
             </div>
             <p className="text-primary-foreground/70 text-sm mb-6 max-w-xs">
               Our solutions make digital transformation faster and simpler.
@@ -66,15 +66,21 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Mail className="w-4 h-4" />
-                hello@devforge.com
+                asimtassaduqwork@gmail.com
               </div>
+              <div className="w-full flex items-start justify-start gap-5">
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <Phone className="w-4 h-4" />
-                +1 (555) 123-4567
+                +92 304 8266031
+              </div>
+              <div className="flex items-center gap-2 text-sm text-primary-foreground/70">
+                <Phone className="w-4 h-4 fill-white/30" />
+                +92 321 7130817
+              </div>
               </div>
               <div className="flex items-center gap-3 text-sm text-primary-foreground/70">
                 <MapPin className="w-4 h-4" />
-                San Francisco, CA
+                Lahore, Pakistan
               </div>
             </div>
           </motion.div>
@@ -115,7 +121,7 @@ const Footer = () => {
           className="pt-8 border-t border-primary-foreground/20 flex flex-col md:flex-row items-center justify-between gap-4"
         >
           <p className="text-sm text-primary-foreground/60">
-            © 2024 DevForge. All rights reserved.
+            © 2024 Rapid-Fire. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a

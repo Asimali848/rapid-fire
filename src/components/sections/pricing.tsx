@@ -6,8 +6,7 @@ const plans = [
   {
     name: "Starter",
     description: "The package offers the basic features you need to get started.",
-    price: "$39",
-    period: "/month",
+    price: "$150",
     features: [
       "Up to 3 web pages",
       "24/7 Technical support",
@@ -19,8 +18,7 @@ const plans = [
   {
     name: "Enterprise",
     description: "This package provides full access to all premium features.",
-    price: "$99",
-    period: "/month",
+    price: "$350",
     features: [
       "Unlimited web pages",
       "Dedicated account manager",
@@ -33,7 +31,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 lg:py-28 bg-secondary/30 overflow-hidden">
+    <section id="pricing" className="py-20 lg:py-28 bg-secondary/30 overflow-hidden flex flex-col items-center justify-center gap-40">
       <div className="container mx-auto px-4 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -78,7 +76,6 @@ const Pricing = () => {
                 <span className="text-4xl font-bold text-foreground">
                   {plan.price}
                 </span>
-                <span className="text-muted-foreground">{plan.period}</span>
               </div>
 
               {/* CTA Button */}
@@ -110,28 +107,28 @@ const Pricing = () => {
             </motion.div>
           ))}
         </div>
-
+</div>
         {/* Professional Plan CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="bg-primary rounded-2xl p-8 max-w-xl mx-auto text-center"
+          className="bg-primary rounded-2xl py-8 px-52 flex flex-col gap-5 max-w-6xl mx-auto text-center"
         >
-          <h3 className="text-2xl font-bold text-primary-foreground mb-3">
+          <h3 className="text-4xl font-bold text-primary-foreground mb-3">
             Professional
           </h3>
-          <p className="text-primary-foreground/80 mb-6">
+          <p className="text-primary-foreground/80 text-lg mb-6">
             Designed for greater flexibility, this package offers advanced tools
             for custom tailoring to your needs.
           </p>
           {/* @ts-ignore */}
-          <Button variant="hero" size="lg">
+          <Button variant="hero" size="xl" className="w-52 mx-auto text-xl">
             Get Started
           </Button>
         </motion.div>
-      </div>
+      {/* </div> */}
     </section>
   );
 };

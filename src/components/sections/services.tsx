@@ -79,15 +79,14 @@ const Services = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className={`group relative p-8 rounded-2xl transition-all cursor-pointer ${service.featured
+              className={`group relative p-8 rounded-2xl transition-all cursor-pointer hover:scale-105 ${service.featured
                   ? "bg-primary text-primary-foreground shadow-lg"
                   : "bg-card shadow-card hover:shadow-card-hover"
                 }`}
