@@ -73,8 +73,8 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             {/* @ts-ignore */}
-            <Button variant="hero" size="lg">
-              Sign Up
+            <Button variant="hero" size="lg" >
+              Connect Us
             </Button>
           </div>
 
@@ -112,7 +112,7 @@ const Navbar = () => {
               ))}
               {/* @ts-ignore */}
               <Button variant="hero" size="lg" className="mt-2">
-                Sign Up
+                Connect Us
               </Button>
             </nav>
           </motion.div>
