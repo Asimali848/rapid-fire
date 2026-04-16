@@ -1,24 +1,17 @@
+import { Routes, Route } from "react-router-dom";
 import Header from "@/components/layout/navbar";
-import Hero from "@/components/sections/hero";
-import Services from "@/components/sections/services";
-import Benefits from "@/components/sections/key-benefits";
-import Pricing from "@/components/sections/pricing";
-import Integrations from "@/components/sections/integrations";
-import CTA from "@/components/sections/cta-section";
 import Footer from "@/components/layout/footer";
+import Home from "@/pages/Home";
+import ServiceDetail from "./pages/ServiceDetail";
 
 const App = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <main>
-        <Hero />
-        <Services />
-        <Benefits />
-        <Pricing />
-        <Integrations />
-        <CTA />
-      </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services/:id" element={<ServiceDetail />} />
+      </Routes>
       <Footer />
     </div>
   );

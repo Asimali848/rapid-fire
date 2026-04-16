@@ -3,12 +3,12 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const integrationLogos = [
-  { name: "Stripe", color: "#635BFF" },
-  { name: "Slack", color: "#4A154B" },
-  { name: "Notion", color: "#000000" },
-  { name: "Figma", color: "#F24E1E" },
-  { name: "GitHub", color: "#181717" },
-  { name: "Vercel", color: "#000000" },
+  { name: "Stripe", src: "https://cdn.simpleicons.org/stripe", color: "#635BFF" },
+  { name: "Slack", src: "https://cdn.simpleicons.org/slack", color: "#4A154B" },
+  { name: "Notion", src: "https://cdn.simpleicons.org/notion", color: "#000000" },
+  { name: "Figma", src: "https://cdn.simpleicons.org/figma", color: "#F24E1E" },
+  { name: "Google", src: "https://cdn.simpleicons.org/google", color: "#4285F4" },
+  { name: "Vercel", src: "https://cdn.simpleicons.org/vercel", color: "#000000" },
 ];
 
 const Integrations = () => {
@@ -60,10 +60,15 @@ const Integrations = () => {
                   className="aspect-square bg-card rounded-2xl shadow-card flex items-center justify-center p-6 hover:shadow-card-hover transition-all duration-300"
                 >
                   <div
-                    className="w-12 h-12 rounded-xl flex items-center justify-center font-bold text-xl"
-                    style={{ backgroundColor: `${logo.color}20`, color: logo.color }}
+                    className="w-16 h-16 rounded-xl flex items-center justify-center font-bold text-xl p-3"
+                    style={{ backgroundColor: `${logo.color}15` }}
                   >
-                    {logo.name.charAt(0)}
+                    <img
+                      src={logo.src}
+                      alt={`${logo.name} logo`}
+                      className="w-full h-full object-contain filter drop-shadow-sm brightness-105"
+                      loading="lazy"
+                    />
                   </div>
                 </motion.div>
               ))}

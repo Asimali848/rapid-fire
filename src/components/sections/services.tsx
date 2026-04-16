@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import {
   Code2,
   Layers,
@@ -9,52 +10,66 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-const services = [
+export const services = [
   {
+    id: "saas-development",
     icon: Code2,
     title: "SaaS Development",
     description:
       "Build scalable software-as-a-service products with modern architecture and seamless user experiences.",
     featured: false,
+    content: "Our SaaS development services focus on building robust, scalable, and secure cloud-based applications. From initial concept and architecture design to development, deployment, and ongoing maintenance, we provide end-to-end solutions tailored to your market needs. We utilize modern tech stacks to ensure your platform is fast, responsive, and ready to grow with your user base."
   },
   {
+    id: "custom-web-apps",
     icon: Layers,
     title: "Custom Web Apps",
     description:
       "Tailored web applications with cutting-edge technologies to match your unique business requirements.",
     featured: true,
+    content: "We specialize in developing custom web applications that address your specific business challenges. Whether you need a complex internal tool, a customer-facing portal, or an innovative new digital product, our team delivers solutions that are highly functional, beautifully designed, and built to perform. We emphasize clean code, intuitive UX, and seamless integrations."
   },
   {
+    id: "quality-assurance",
     icon: Shield,
     title: "Quality Assurance",
     description:
       "Comprehensive testing and quality control to ensure high-performance, bug-free applications.",
     featured: false,
+    content: "Quality is at the core of everything we build. Our QA services encompass automated and manual testing, performance testing, security audits, and continuous integration pipelines. We rigorously test your applications across different devices and browsers to ensure a flawless user experience and prevent costly issues before they reach production."
   },
   {
+    id: "ui-ux-design",
     icon: Lightbulb,
     title: "UI/UX Design",
     description:
       "Beautiful, intuitive interfaces designed for optimal user engagement and conversion.",
     featured: false,
+    content: "Our UI/UX design process is centered around understanding your users and business goals. We create stunning visual designs and intuitive user journeys that drive engagement. From wireframes and prototypes to full high-fidelity design systems, we craft digital experiences that leave a lasting impression and convert visitors into loyal customers."
   },
   {
+    id: "api-integration",
     icon: Package,
     title: "API Integration",
     description:
       "Seamless integration with third-party services, payment gateways, and enterprise systems.",
     featured: false,
+    content: "Connect your digital ecosystem effortlessly. Our API integration services allow your web applications to communicate securely with third-party tools, from CRMs and payment processors to specialized enterprise software. We build custom APIs and implement third-party integrations that streamline workflows and enhance your product's capabilities."
   },
   {
+    id: "analytics-insights",
     icon: BarChart3,
     title: "Analytics & Insights",
     description:
       "Data-driven dashboards and reporting tools to help you make informed business decisions.",
     featured: false,
+    content: "Unlock the power of your data. We design and develop custom analytics dashboards and reporting tools that provide real-time insights into your business metrics. By integrating various data sources, we help you visualize key performance indicators, track user behavior, and make informed, data-driven decisions that propel your business forward."
   },
 ];
 
 const Services = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="services" className="py-20 lg:py-28 bg-secondary/30 overflow-hidden">
       <div className="container mx-auto px-4 lg:px-8">
@@ -82,6 +97,7 @@ const Services = () => {
           {services.map((service) => (
             <motion.div
               key={service.title}
+              onClick={() => navigate(`/services/${service.id}`)}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

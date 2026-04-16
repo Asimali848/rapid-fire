@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Star, Users, Award, Clock } from "lucide-react";
+import { ArrowRight, Star, Users, Award, Clock } from "lucide-react";
 
 const Hero = () => {
   const stats = [
@@ -62,14 +62,14 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
-            <Button variant="hero" size="xl" className="hover:scale-105 transition-all duration-300">
+            <Button variant="hero" size="xl" className="hover:scale-105 transition-all duration-300 cursor-pointer">
               Get Started
               <ArrowRight className="w-5 h-5" />
             </Button>
-            <Button variant="heroOutline" size="xl" className="hover:scale-105 transition-all duration-300 bg-transparent text-primary hover:bg-primary hover:text-white">
+            {/* <Button variant="heroOutline" size="xl" className="hover:scale-105 transition-all duration-300 bg-transparent text-primary hover:bg-primary hover:text-white">
               <Play className="w-5 h-5" />
               Try Demo
-            </Button>
+            </Button> */}
           </motion.div>
 
           {/* Rating */}
